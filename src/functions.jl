@@ -33,13 +33,5 @@ function predict(X, w, b)
     return X * w .+ b
 end
 
-# example
-X = [1 2; 3 4; 5 6]
-y = [0.5, 0.7, 0.9]
-weights, bias = linear_regression(X, y, 0.01, 1000)
-y_pred = predict(X, weights, bias)
-# code for plotting graph of the data
-using Plots
-scatter(X[:, 1], y, label="data")
-plot!(X[:, 1], y_pred, label="prediction")
+
 
